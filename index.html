@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDA College</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+    <script>
+        function showDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Hide dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                const dropdowns = document.getElementsByClassName('dropdown');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://pdacek.ac.in/assets/images/pdacek4.jpeg" alt="pdacek logo" class="college-logo">
+        </div>
+        <div class="right-icons">
+            <a href="https://alumni.pdacek.ac.in/">
+                <img width="75" height="65" src="https://pdacek.ac.in/assets/images/alumni.png" alt="Alumni">
+            </a>
+            <a href="https://pda-students.contineo.in/index.php">
+                <img width="75" height="65" src="https://pdacek.ac.in/assets/images/contineo.png" alt="Contineo">
+            </a>
+            <a href="http://pda.eduwizerp2.in/">
+                <img width="65" height="65" src="https://pdacek.ac.in/assets/images/logo/Eduwise.jpeg" alt="Eduwise">
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="javascript:void(0);" class="dropdown-btn" onclick="showDropdown('aboutDropdown')">About Us</a>
+                <ul class="dropdown" id="aboutDropdown">
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">Institute</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Governing Body</a></li>
+                    <li><a href="#">Committees</a></li>
+                    <li><a href="#">Accreditations</a></li>
+                    <li><a href="#">IQAC</a></li>
+                    <li><a href="#">Mandatory Disclosure</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="dropdown-btn" onclick="showDropdown('admissionsDropdown')">Admissions</a>
+                <ul class="dropdown" id="admissionsDropdown">
+                    <li><a href="#">Programs Offered</a></li>
+                    <li><a href="#">Eligibility Criteria</a></li>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Application Forms</a></li>
+                    <li><a href="#">Prospectus</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="dropdown-btn" onclick="showDropdown('departmentsDropdown')">Departments</a>
+                <ul class="dropdown" id="departmentsDropdown">
+                    <li><a href="#">Civil Engineering</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical and Electronics Engineering</a></li>
+                    <li><a href="#">Electronics and Communication Engineering</a></li>
+                    <li><a href="#">Industrial and Production Engineering</a></li>
+                    <li><a href="#">Electronics and Instrumentation Engineering</a></li>
+                    <li><a href="#">Architecture</a></li>
+                    <li><a href="#">Ceramic and Cement Technology</a></li>
+                    <li><a href="#">Computer Science and Engineering</a></li>
+                    <li><a href="#">Automobile Engineering</a></li>
+                    <li><a href="#">Information Science and Engineering</a></li>
+                    <li><a href="#">Computer Science and Design</a></li>
+                    <li><a href="#">Artificial Intelligence and Machine Learning</a></li>
+                    <li><a href="#">Physics</a></li>
+                    <li><a href="#">Chemistry</a></li>
+                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="#">Humanities and Social Science</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="dropdown-btn" onclick="showDropdown('academicDropdown')">Academic</a>
+                <ul class="dropdown" id="academicDropdown">
+                    <li><a href="#">Academic Regulations</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                    <li><a href="#">I Year B.E Curriculum</a></li>
+                    <li><a href="#">Calendar of Events</a></li>
+                    <li><a href="#">Academic Council</a></li>
+                    <li><a href="#">Board of Studies</a></li>
+                    <li><a href="#">Academic Notifications</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Examinations</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Placements</a></li>
+            <li><a href="#">TEQIP-III</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Image (Large College Image) -->
+    <div class="hero-section">
+        <img src="https://www.targetadmission.com/img/colleges/newc/7726-226941.jpg" alt="College Image" class="hero-image">
+    </div>
+
+    <!-- Section below the hero image -->
+    <div class="content-section">
+        <h1>Hello, this is from CSE</h1>
+        <button onclick="showHeading()">Click me to show <strong>HEADING2</strong></button>
+        <h2 id="heading2" style="display:none;">Hello, it's COE</h2>
+
+        <!-- List of Branches -->
+        <h4><strong>LIST OF BRANCHES PROVIDED BY OUR COLLEGE</strong></h4>
+        <ul>
+            <li><strong>CSE</strong></li>
+            <li><strong>CSD</strong></li>
+            <li><strong>ECE</strong></li>
+            <li><strong>AIML</strong></li>
+            <li><strong>EEE</strong></li>
+            <li><strong>CIVIL</strong></li>
+            <li><strong>MECH</strong></li>
+            <li><strong>ISE</strong></li>
+        </ul>
+
+        <!-- Student Details -->
+        <h4>Student Details</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                    <th>USN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PO</td>
+                    <td rowspan="2"><strong>CSE</strong></td>
+                    <td>1st year</td>
+                    <td>PDA123456</td>
+                </tr>
+                <tr>
+                    <td>OP</td>
+                    <td>2nd year</td>
+                    <td>PDA65657</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>We are in COE class which is from 3:15 AM to 5:15 PM <strong>IN PDA COLLEGE</strong></p>
+    </div>
+
+    <!-- Watermark -->
+    <div class="watermark">Done by Omkar Padashetty</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Right Reserved by Omkar Padashetty</p>
+    </footer>
+
+</body>
+</html>

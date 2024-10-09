@@ -1,0 +1,163 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9; /* Light background for header */
+    border-bottom: 1px solid lightgray;
+}
+
+.college-logo {
+    width: 550px; /* Increased width for a larger logo */
+    height: auto; /* Keep the aspect ratio intact */
+}
+
+.right-icons {
+    display: flex;
+    gap: 100px;
+}
+
+.right-icons img {
+    width: 95px;
+    height: 85px;
+    object-fit: contain;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #5e3e92; /* Dark purple color */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative; /* Position relative to allow absolute positioning of dropdown */
+}
+
+.navbar ul li a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    background-color: #4b0082; /* Dark purple on hover */
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the navbar */
+    background-color: #5e3e92; /* Dropdown background color */
+    min-width: 160px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown appears above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+.dropdown a {
+    color: white; /* Dropdown text color */
+    padding: 8px 12px; /* Reduced padding for compactness */
+    text-align: left; /* Align text to the left */
+    display: block; /* Make links block elements */
+}
+
+.dropdown a:hover {
+    background-color: #4b0082; /* Change to desired hover color for dropdown items */
+}
+
+/* Hero image section */
+.hero-section {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Content section */
+.content-section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: darkgreen;
+    margin: 20px 0;
+}
+
+button {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/* Branch list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid darkgreen;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: lightgreen;
+}
+/* Watermark styles */
+.watermark {
+    position: fixed; /* Fixed position to stay in view */
+    bottom: 10px; /* Position from the bottom */
+    right: 10px; /* Position from the right */
+    font-size: 24px; /* Font size of the watermark */
+    color: rgb(0, 0, 0); /* Light color with transparency */
+    pointer-events: none; /* Prevent interaction with the watermark */
+    z-index: -1; /* Send the watermark behind other content */
+    transform: rotate(-30deg); /* Rotate for a watermark effect */
+    opacity: 0.5; /* Slight transparency */
+}

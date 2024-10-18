@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDA College</title>
-    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="index.css"> 
+    <style>
+        .hover-board {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 600px;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+        .hover-board:hover {
+            transform: translateX(-50%) translateY(-10px);
+        }
+        .news-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+            max-height: 200px;
+        
+            animation: scroll 1s linear;
+        }
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
     <script>
         function showDropdown(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Hide dropdown if clicked outside
         window.onclick = function(event) {
             if (!event.target.matches('.dropdown-btn')) {
                 const dropdowns = document.getElementsByClassName('dropdown');
@@ -20,11 +57,19 @@
                 }
             }
         };
+
+        function showHeading() {
+            const heading = document.getElementById("heading2");
+            heading.style.display = heading.style.display === 'none' ? 'block' : 'none';
+        }
     </script>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <div class="hover-board">
+        Welcome to PDA College clone website done by Omkar and Prajwal
+    </div>
+
     <header class="header">
         <div class="logo-container">
             <img src="https://pdacek.ac.in/assets/images/pdacek4.jpeg" alt="pdacek logo" class="college-logo">
@@ -42,7 +87,6 @@
         </div>
     </header>
 
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <ul>
             <li><a href="#">Home</a></li>
@@ -112,65 +156,70 @@
         </ul>
     </nav>
 
-    <!-- Hero Image (Large College Image) -->
     <div class="hero-section">
         <img src="https://www.targetadmission.com/img/colleges/newc/7726-226941.jpg" alt="College Image" class="hero-image">
     </div>
 
-    <!-- Section below the hero image -->
-    <div class="content-section">
-        <h1>Hello, this is from CSE</h1>
-        <button onclick="showHeading()">Click me to show <strong>HEADING2</strong></button>
-        <h2 id="heading2" style="display:none;">Hello, it's COE</h2>
-
-        <!-- List of Branches -->
-        <h4><strong>LIST OF BRANCHES PROVIDED BY OUR COLLEGE</strong></h4>
+    <div class="news-section">
+        <h4><strong>News and Updates</strong></h4>
         <ul>
-            <li><strong>CSE</strong></li>
-            <li><strong>CSD</strong></li>
-            <li><strong>ECE</strong></li>
-            <li><strong>AIML</strong></li>
-            <li><strong>EEE</strong></li>
-            <li><strong>CIVIL</strong></li>
-            <li><strong>MECH</strong></li>
-            <li><strong>ISE</strong></li>
+            <li>🔔<strong>🔪🔪New semester begins on september 30th.🩸</strong></li>
+            <li>🔔induction programme will begin on september 16th  </li>
+                        <li> EXAM CIRCULAR - Notice - BE/B.Arch Summer Semester Examination Nov - Dec 2024</li>
+            <li>🔔💀<strong>EXAM TIMETABLE</strong> - Final Time Table of M.Tech I Sem Makeup Theory SE Examinations - November 2024</li>
+            <li>🔔 CIRCULAR - Notice - BE/B.Arch Summer Semester Examination Fee payment regarding </li>
         </ul>
-
-        <!-- Student Details -->
-        <h4>Student Details</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Branch</th>
-                    <th>Year</th>
-                    <th>USN</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PO</td>
-                    <td rowspan="2"><strong>CSE</strong></td>
-                    <td>1st year</td>
-                    <td>PDA123456</td>
-                </tr>
-                <tr>
-                    <td>OP</td>
-                    <td>2nd year</td>
-                    <td>PDA65657</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p>We are in COE class which is from 3:15 AM to 5:15 PM <strong>IN PDA COLLEGE</strong></p>
     </div>
 
-    <!-- Watermark -->
-    <div class="watermark">Done by Omkar Padashetty</div>
 
-    <!-- Footer -->
+   
+
+
+    <h4><strong>LIST OF BRANCHES PROVIDED BY OUR COLLEGE</strong></h4>
+    <ul>
+        <li><strong>CSE</strong></li>
+        <li><strong>CSD</strong></li>
+        <li><strong>ECE</strong></li>
+        <li><strong>AIML</strong></li>
+        <li><strong>EEE</strong></li>
+        <li><strong>CIVIL</strong></li>
+        <li><strong>MECH</strong></li>
+        <li><strong>ISE</strong></li>
+    </ul>
+
+    <h4>Student Details</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Year</th>
+                <th>USN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PO</td>
+                <td rowspan="2"><strong>CSE</strong></td>
+                <td>1st year</td>
+                <td>PDA123456</td>
+            </tr>
+            <tr>
+                <td>OP</td>
+                <td>2nd year</td>
+                <td>PDA65657</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>We are in COE class which is from 3:15 AM to 5:15 PM <strong>IN PDA COLLEGE</strong></p>
+
+    
+
+    <div class="watermark">Done by Omkar Padashetty & Prajwal Math</div>
+
     <footer class="footer">
-        <p>Right Reserved by Omkar Padashetty</p>
+        <p>Right Reserved by Omkar Padashetty & Prajwal Math</p>
     </footer>
 
 </body>
